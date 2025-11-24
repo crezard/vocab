@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Word } from '../types';
+import { Word } from '../types.ts';
 import { Volume2, ChevronDown, ChevronUp } from 'lucide-react';
-import { playPronunciation } from '../services/gemini';
+import { playPronunciation } from '../services/gemini.ts';
 
 interface WordCardProps {
   word: Word;

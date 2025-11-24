@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, BrainCircuit, Sparkles, Loader2, Volume2, Search, GraduationCap } from 'lucide-react';
-import { Word, AppMode, Topic, Difficulty } from './types';
-import { generateWordList } from './services/gemini';
-import WordCard from './components/WordCard';
-import QuizMode from './components/QuizMode';
+import { BookOpen, BrainCircuit, Sparkles, Loader2, Search, GraduationCap } from 'lucide-react';
+import { Word, AppMode, Topic, Difficulty } from './types.ts';
+import { generateWordList } from './services/gemini.ts';
+import WordCard from './components/WordCard.tsx';
+import QuizMode from './components/QuizMode.tsx';
 
 const TOPICS: Topic[] = ["Daily Life", "School", "Travel", "Science", "Emotions", "Food", "Hobbies"];
 const DIFFICULTIES = Object.values(Difficulty);

@@ -1,6 +1,6 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
-import { Word, Topic, Difficulty } from "../types";
-import { decode, decodeAudioData } from "./audioUtils";
+import { Word, Topic, Difficulty } from "../types.ts";
+import { decode, decodeAudioData } from "./audioUtils.ts";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
