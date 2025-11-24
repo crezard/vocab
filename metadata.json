@@ -1,0 +1,5 @@
+{
+  "name": "VocabMaster Middle School",
+  "description": "An interactive vocabulary learning app for middle school students powered by Gemini AI. Features topic-based generation, text-to-speech pronunciation, and quiz modes.",
+  "requestFramePermissions": []
+}
