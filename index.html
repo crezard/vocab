@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VocabMaster Middle School</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Babel for compiling TSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
@@ -45,7 +49,7 @@
         background: #94a3b8;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@18.3.1",
@@ -57,9 +61,20 @@
   }
 }
 </script>
-</head>
+    <script>
+      // Polyfill for process.env to work on GitHub Pages
+      window.process = {
+        env: {
+          // TODO: Paste your Gemini API Key here for the GitHub Pages demo.
+          // Note: In a real production app, never expose your key in frontend code.
+          API_KEY: '' 
+        }
+      };
+    </script>
+  </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Load index.tsx with Babel processing -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
